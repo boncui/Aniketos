@@ -1,4 +1,4 @@
-# Tally — Design Document
+# Aniketos — Design Document
 
 **A macOS disk-accounting, cleanup, and malware-hygiene tool built to be verifiable rather than persuasive.**
 
@@ -8,13 +8,14 @@
 | **Date** | 2026-07-27 |
 | **Target platform** | macOS 26.0+ (Tahoe), Apple Silicon only |
 | **Reference machine** | MacBook Pro `Mac15,10`, M3 Max (10P+4E), 36 GB RAM, 926 GB APFS, macOS 26.5.1 (25F80), SIP enabled |
-| **Name** | ⚠️ Provisional. Trademark clearance required before any branding spend. |
+| **Name** | **Aniketos** — Gk. Ἀνίκητος, *"unconquered / invincible"*; an epithet of Heracles and later Mithras, not a distinct deity. ⚠️ Trademark clearance still required before branding spend (see §13). |
+| **Repo** | `github.com/boncui/Aniketos` |
 
 ---
 
 ## 0. Thesis
 
-> **macOS cannot tell you where your disk went, and every product that claims to has an incentive to lie about it. Tally is the tool that accounts for 100% of your disk and lets you prove it.**
+> **macOS cannot tell you where your disk went, and every product that claims to has an incentive to lie about it. Aniketos is the tool that accounts for 100% of your disk and lets you prove it.**
 
 This is not "another Mac cleaner." The cleaner category is commercially crowded and reputationally toxic (§3, §4). The defensible product is one layer beneath it: **honest byte accounting**. Cleanup is the *payload*; accounting is the *reason to exist*; open, auditable rules are the *moat*.
 
@@ -457,7 +458,7 @@ We deliver "scan for viruses" — but scoped to what is *true* rather than what 
 
 **Deferred to v2, gated on the ES entitlement filed on day one:** real-time protection, behavioural detection, ransomware I/O monitoring. Architect the scanner behind an engine interface so an ES-backed engine drops in without a rewrite.
 
-**Never:** bundled VPN, identity monitoring, a competing signature database, or any claim to replace XProtect. State plainly in-product that Tally **complements** Gatekeeper/XProtect rather than replacing them — that honesty is itself differentiation in a category full of scareware.
+**Never:** bundled VPN, identity monitoring, a competing signature database, or any claim to replace XProtect. State plainly in-product that Aniketos **complements** Gatekeeper/XProtect rather than replacing them — that honesty is itself differentiation in a category full of scareware.
 
 ### On ML detection
 
